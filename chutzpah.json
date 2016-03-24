@@ -1,0 +1,12 @@
+﻿{
+  "References": [
+    {
+      "Includes": [ "*/compiled_js/qunittestrunner.js", "*/qunit/qunit_1.22.0.js#" ]
+    }
+  ],
+  "Tests": [
+    {
+      "Includes": ["*/tests/*.tests.js"]
+    }
+  ]
+}

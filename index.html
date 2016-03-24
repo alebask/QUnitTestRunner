@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>QUnitTestRunner.js</title>    
+      
+    <script src="compiled_js/QUnitTestRunner.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+
+            QUnitTestRunner.Execute("../tests/test1.js", "../tests/test2.js");
+            document.
+                getElementById("h2").
+                innerHTML= "Press {Ctrl+Shift+" + String.fromCharCode(QUnitTestRunner.Config.attachToKeyCode) + "} to run tests";
+        }
+    </script>
+</head>
+<body>
+    <h1>QUnitTestRunner.js</h1>
+    <h2 id="h2"></h2>
+</body>
+</html>
