@@ -1,5 +1,6 @@
-﻿//extend window 
+﻿// extend window
 interface Window {
-    QUnit: any;
-    APPLICATION_VERSION: any;
+    QUnit: any;                 // qunit framework
+    APPLICATION_VERSION: any;   // crm version
+    Xrm: any;                   // crm root namespace
 }

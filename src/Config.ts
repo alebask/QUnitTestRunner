@@ -1,6 +1,6 @@
-﻿    /**
-     * Configuration parameters for QUnitTestRunner          
-     */
+﻿/**
+ * Configuration parameters for QUnitTestRunner
+ */
 namespace QUnitTestRunner.Config {
     /**
      * Pressed in combination with Shift+Ctrl activates QUnitTestRunner
@@ -30,8 +30,14 @@ namespace QUnitTestRunner.Config {
     /**
      * Modify in order to change the default appearance of QUnit test runner on a page after activation
      */
-    export const qunitDivStyle: string = "height:80%;width:50%;top:0px;right:50px;position:absolute;background-color:gray;z-index:100;overflow-y:auto";    
+    export const qunitDivStyle: string = "height:80%;width:50%;top:0px;right:50px;position:absolute;background-color:gray;z-index:100;overflow-y:auto";
+
+    /**
+     * Enable monitoring of modifications of web resources on crm form
+     */
+    export const webResourceMonitorEnabled: boolean = true;
+    /**
+     * Pooling interval to track modifications of web resources on crm form
+     */
+    export const webResourceMonitorInterval: number = 1000;
 }
-
-
-

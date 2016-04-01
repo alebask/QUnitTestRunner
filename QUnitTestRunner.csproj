@@ -28,10 +28,11 @@
     <Content Include="qunit\qunit_1.22.0.js" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="tests\fakes.js" />
     <Content Include="tests\test1.js" />
     <Content Include="tests\QUnitTestRunner.Tests.js" />
+    <Content Include="tests\WebResourceMonitor.Tests.js" />
     <Content Include="web.config" />
-    <None Include="chutzpah.json" />
     <Content Include="CrmSolution\QUnitTestRunnerjs.zip" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
@@ -42,6 +43,8 @@
     <Content Include="compiled_js\QUnitTestRunner.js" />
     <Content Include="readme.md" />
     <TypeScriptCompile Include="qunit\qunit.d.ts" />
+    <TypeScriptCompile Include="src\XrmQuery.ts" />
+    <TypeScriptCompile Include="src\WebResourceMonitor.ts" />
     <TypeScriptCompile Include="src\Window.ts" />
     <TypeScriptCompile Include="src\CookieState.ts" />
     <TypeScriptCompile Include="src\Config.ts" />

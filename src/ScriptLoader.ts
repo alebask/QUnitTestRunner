@@ -1,11 +1,9 @@
 ﻿namespace QUnitTestRunner {
-
     /**
      * Enables downloading remote scripts to existing page
-     * 
+     *
      */
     export class ScriptLoader {
-
         /**The number of currently loading scripts*/
         loading: number = 0;
 
@@ -14,14 +12,14 @@
 
         /**callback after loading all scripts*/
         onload: Function;
-        
+
         /**callback in case of error*/
         onerror: Function;
 
         /**
          * Creates a new instance of ScriptLoader
          * @param onload callback after loading all scripts
-         * @param onerror callback in case of error 
+         * @param onerror callback in case of error
          */
         constructor(onload?: Function, onerror?: Function) {
             this.onload = onload;
@@ -30,19 +28,18 @@
 
         /**
          * Loads a remote script by adding a <script> tag to page's head
-         * @param url location of remote script 
+         * @param url location of remote script
          */
         load(url: string): void {
+            var head = document.getElementsByTagName('head')[0] || document.documentElement;
 
-            var head = targetDocument.getElementsByTagName('head')[0] || targetDocument.documentElement;
-
-            var script = <HTMLScriptElement>targetDocument.getElementById(url);
+            var script = <HTMLScriptElement>document.getElementById(url);
 
             if (script) {
                 head.removeChild(script);
             }
 
-            script = targetDocument.createElement("script");
+            script = document.createElement("script");
             script.id = url;
             script.type = "text/javascript";
             script.src = url;
@@ -67,5 +64,4 @@
             this.loading++;
         }
     }
-
 }
